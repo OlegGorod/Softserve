@@ -10,6 +10,4 @@ function calcPension (year) {
     return `Your pension will come in ${answerAge} years, in ${currentYear + answerAge} year`;
 }
 
-calcPension(45);
-
-//
+calcPension(4);
