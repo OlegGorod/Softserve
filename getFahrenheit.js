@@ -1,11 +1,8 @@
 function getFahrenheit(number) {
-    if (number !== "number") {
+    if (typeof number !== "number") {
         return `Error`;
-    } else {
-        let result = 0;
-        result = (number*9/5)+32;
-          console.log(result);
+    } 
+    return result = (number*9/5)+32;        
     }
-}
 
-getFahrenheit(23);
+getFahrenheit(2);
