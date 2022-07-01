@@ -1,0 +1,11 @@
+function calcPaint(long,width,height) {
+    if (long > 1000 || width > 1000 || height > 1000) {
+        console.log('Are u crazy?')
+    } else {
+    let totalSquare = long*width*height;
+    let result = (totalSquare*1)/16;
+    return `You need ${Math.ceil(result)} tins to paint your office`;
+    };
+};
+
+calcPaint(1001,1,1);
