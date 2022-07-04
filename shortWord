@@ -1,11 +1,10 @@
-Напишіть функцію, що отримує у якості аргумента рядок слів та повертає довижину найкоротшого:
-Приклад:
-"bitcoin take over the world maybe who knows perhaps" --> 3
+Напишіть функцію, що отримує у якості аргумента рядок слів та повертає довижину найкоротшого
 
-let phrase = "turns out random test cases are easier than writing out basic ones";
+function getShortWord(phrase) {
 let phraseArr = phrase.split(' ');
 let result = [];
 for (let i = 0; i < phraseArr.length; i++) {
         result[i] = phraseArr[i].length;
    };
-console.log(Math.min(...result));
+return Math.min(...result);
+};
