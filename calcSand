@@ -4,14 +4,31 @@
 
 Вхідні дані 6 натуральних чисел A1, A2, A3, B1, B2, B3. Усі числа не перевищують 100.
 
-Вихідні дані Єдине ціле число – суму у гривнях, яку зможуть співробітники заробити у разі найкращого для себе заповнення ємностей піском.
+Вихідні дані Єдине ціле число – суму у гривнях, яку зможуть співробітники заробити у разі найкращого для себе заповнення ємностей піском. (Not my decision)
 
-function calcSand(sand1,sand2,sand3,bucket1,bucket2,bucket3) {
-    if (sand1 > 100 || sand2 > 100 || sand3 > 100 || bucket1 > 100 || bucket2 > 100 || bucket3 > 100) {
-        console.log('No more than 100');
-} else {
-    return `${(sand1*bucket1)+(sand2*bucket2)+(sand3*bucket3)} грн`;
-};
-};
+function profit() {
+  let prise = [A1, A2, A3];
+  sortedPrise = prise.sort((a, b) => b - a);
+  let capacity = [B1, B2, B3];
+  sortedCapacity = capacity.sort((a, b) => b - a);
+  let bestIncome = 0;
+  for (let i = 0; i < sortedPrise.length; i++) {
+    bestIncome += sortedPrise[i] * sortedCapacity[i];
+  }
+  console.log(bestIncome);
+}
 
-calcSand(2,3,2,3,2,101);
+
+-----
+
+function findBestIncome(a1, a2, a3, b1, b2, b3) {
+  let bestResult = 0
+  const arrayOfMoney = [a1, a2, a3].sort((a, b) => a - b)
+  const arrayOfWeight = [b1, b2, b3].sort((a, b) => a - b)
+  for (let i = 0; i < 3; i++) {
+    bestResult += arrayOfMoney[i] * arrayOfWeight[i]
+  }
+  return bestResult
+}
+
+console.log('Максимальный заработок =',findBestIncome(10, 20, 30, 2, 5, 10),'грн')
