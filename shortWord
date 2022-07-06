@@ -1,4 +1,5 @@
-Напишіть функцію, що отримує у якості аргумента рядок слів та повертає довижину найкоротшого
+Напишіть функцію, що отримує у якості аргумента рядок слів та повертає довижину найкоротшого.
+Example: "bitcoin take over the world maybe who knows perhaps" --> 3
 
 function getShortWord(phrase) {
 let phraseArr = phrase.split(' ');
@@ -8,3 +9,5 @@ for (let i = 0; i < phraseArr.length; i++) {
    };
 return Math.min(...result);
 };
+
+getShortWord("Lets all go on holiday somewhere very cold");
