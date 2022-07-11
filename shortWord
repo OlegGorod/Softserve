@@ -11,3 +11,8 @@ return Math.min(...result);
 };
 
 getShortWord("Lets all go on holiday somewhere very cold");
+
+--- corporate Answer
+
+const getShortW = phrase => Math.min(...phrase.split(' ').map(ph => ph.length));
+console.log(getShortW("Lets all go on holiday somewhere very cold"));
