@@ -1,0 +1,18 @@
+.btn {
+    width: 150px;
+    height: 50px;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.6em;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#timesClicked {
+    font-weight: bold;
+    font-size: 2.5em;
+    display: block;
+    margin: 0 auto;
+    transform: translateX(7.5%);
+}
