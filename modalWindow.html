@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+            }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            border-color: #edeef6;
+            font-family: 'Lucida Sans', sans-serif;
+        }
+
+        button {
+            background-color: #47a386;
+            border: none;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .modal-container {
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 40;
+            left: 80;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 20px;
+        }
+
+        .modal-container.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal {
+            
+            background-color: #cfc8c8;;
+            border-radius: 20px;
+            padding: 30px 50px;
+            width: 600px;
+            max-width: 100%;
+            text-align: center;
+        }
+     
+      </style>  
+  </head>
+  <body>
+ <button id="open">Open modal</button>
+
+ <div class="modal-container" id="modal_container">
+    <div class="modal">
+        <h1>Hello from modal window</h1>        
+        <button id="close">Close me</button>
+    </div>
+ </div>
+    <script>
+
+let open = document.getElementById('open');
+let modal_container = document.getElementById('modal_container');
+let close = document.getElementById('close');
+
+
+    open.addEventListener('click', (event) => {
+    modal_container.classList.add('show');
+    });
+
+
+    close.addEventListener('click', (event) => {
+    modal_container.classList.remove('show');
+    });
+
+    
+    </script>
+  </body>
+</html>
+
